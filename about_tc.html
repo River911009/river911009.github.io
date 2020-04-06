@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="shortcut icon" href="source/image/favicon.ico" />
+	<link rel="apple-touch-icon" href="source/image/webclip.png" />
+
+    <title>關於至合</title>
+
+    <!-- W3.CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <!-- Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+    <link rel="stylesheet" href="source/css/font.css" />
+	<!-- Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<!-- Go to top button style -->
+<style>
+#myBtn {
+  display:none;
+  position:fixed;
+  bottom:20px;
+  right:30px;
+  z-index:99;
+  border:none;
+  outline:none;
+  background-color:grey;
+  color:white;
+  cursor:pointer;
+  padding:10px;
+  border-radius:4px;
+}
+</style>
+
+	<!-- Action -->
+	<script src="source/javascript/action.js"></script>
+</head>
+
+<body class="w3-black">
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up fa-fw w3-large"></i></button>
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1024px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="source/image/profile.png" style="width:100%" alt="Profile">
+          <div class="w3-display-bottomleft w3-container w3-black w3-opacity">
+            <a class="w3-xxlarge">廖至合</a>
+          </div>
+        </div>
+        <div class="w3-container">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>程式設計教師</p>
+		  <p><i class="fa fa fa-mars fa-fw w3-margin-right w3-large w3-text-teal"></i>男</p>
+          <p><i class="fa fa-calendar fa-fw w3-margin-right w3-large w3-text-teal"></i>1991年10月9日</p>
+		  <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>桃園, 台灣</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="mailto:m0331005@gm.ncue.com.tw">m0331005</a></p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="tel:+886986135798">0986135798</a></p>
+          
+          <hr>
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>專業技能</b></p>
+          <p onclick="document.getElementById('explain_programming').classList.toggle('w3-hide');">程式設計</p>
+          <div id="explain_programming" class="w3-panel w3-display-container w3-yellow w3-hide">
+			<a class="w3-tiny">[電腦]</br>VB, C, JAVA</br>[韌體]</br>8051, Arduino, ARM</a>
+		  </div>
+		  <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+          </div>
+          <p onclick="document.getElementById('explain_hardware').classList.toggle('w3-hide');">硬體電路</p>
+          <div id="explain_hardware" class="w3-panel w3-display-container w3-yellow w3-hide">
+			<a class="w3-tiny">[電路設計]</br>[電路板製作]</br>機械雕刻, 光罩蝕刻</br>[電路檢修]</a>
+		  </div>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+              <div class="w3-center w3-text-white">80%</div>
+            </div>
+          </div>
+		  <p onclick="document.getElementById('explain_webdesign').classList.toggle('w3-hide');">網頁設計</p>
+		  <div id="explain_webdesign" class="w3-panel w3-display-container w3-yellow w3-hide">
+			<a class="w3-tiny">[網頁]</br>Html, CSS, Javascript</br>[資料庫]</br>php, MySQL</a>
+		  </div>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+          </div>
+		  <p onclick="document.getElementById('explain_MIS').classList.toggle('w3-hide');">網路維護</p>
+		  <div id="explain_MIS" class="w3-panel w3-display-container w3-yellow w3-hide">
+			<a class="w3-tiny">[硬體]</br>裝修, 介面製作</br>[系統]</br>Windows, Linux</br>[伺服器架設]</a>
+		  </div>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">70%</div>
+          </div>
+          <br>
+
+          <p class="w3-large w3-text-theme"><b><i class="fa fa fa-pencil fa-fw w3-margin-right w3-text-teal"></i>教學科目</b></p>
+          <p>程式設計</p>
+          <p>基本電學</p>
+          <p>電子學</p>
+		  <p>數位邏輯</p>
+		  <p>專題競賽</p>
+          <br>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+	  <!-- Panel 1 -->
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>各項經歷</h2>
+		<div class="w3-container">
+          <h5 class="w3-opacity"><b>實習教師 / 楊梅高中</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016年8月 - 2017年1月</h6>
+          <p>協助105學年度技藝競賽電腦修護職種培訓</p>
+		  <p>參與優質化溼地復育課程「埤塘新樂園」</p>
+		  <p>協助指導學生製作台灣穿山甲文創商品</p>
+          <hr>
+        </div>
+		
+		<div class="w3-container">
+          <h5 class="w3-opacity"><b>數學教師、閱讀活動教師 / 博幼社會福利基金會</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2015年10月 - 2016年1月</h6>
+          <p>國中數學與閱讀理解課程教師</p>
+          <hr>
+        </div>
+		
+		<div class="w3-container">
+          <h5 class="w3-opacity"><b>[競賽]經濟部能源局太陽光電教案競賽</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2014年10月</h6>
+          <p>教案組：太陽能小蟲</p>
+          <hr>
+        </div>
+		
+		<div class="w3-container">
+          <h5 class="w3-opacity"><b>學生諮商輔導中心志工 / 彰化師範大學</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2012年10月 - 2013年6月</h6>
+          <p>協助辦理各項活動講座、駐點心理測驗站</p>
+          <hr>
+        </div>
+        
+		<div class="w3-container">
+          <h5 class="w3-opacity"><b>[競賽]第三屆東華盃太陽光電創意應用競賽佳作</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013年7月</h6>
+          <p>Garden Mate 園藝幫手：太陽能源智慧除草機</p>
+          <hr>
+        </div>
+        
+		<div class="w3-container">
+          <h5 class="w3-opacity"><b>[競賽]98學年度全國高級中等學校技藝競賽電腦修護職種優勝</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2009年12月</h6>
+          <br>
+        </div>
+
+      </div>
+
+	  <!-- Panel 2 -->
+      <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>學歷</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>國立彰化師範大學　工業教育與技術學系</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2014 - 2016</h6>
+          <p>產業技術組碩士</p>
+		  <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2014</h6>
+          <p>電機組學士</p>
+          <hr>
+        </div>
+		<div class="w3-container">
+          <h5 class="w3-opacity"><b>墨爾本Impact英語學校</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2015</h6>
+          <p>Elementary Level</p>
+		  <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>桃園縣立楊梅高中</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2007 - 2010</h6>
+          <p>資訊科</p>
+		  <br>
+        </div>
+      </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top w3-opacity">
+  <p class="w3-small">Edited by River. (Traditional Chinese)</p>
+  <p class="w3-small">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+</html>
