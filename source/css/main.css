@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @media screen and (min-width:1400px){
 
   nav#navbar ul li{
@@ -9,3 +10,20 @@
 @media print {
 
 }
+=======
+nav#navbar ul li{
+  display: inline;
+  
+}
+@media print{
+  @page{
+    size: A4 portrait;
+    margin: 0.5cm;
+    orphans:4;
+    widows:2;
+  }
+  body{
+    background-color: rgb(184, 165, 149);
+  }
+}
+>>>>>>> 8ab9e5b57e809301c214ba91c09d58a3852ae3f2
