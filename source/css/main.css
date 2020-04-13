@@ -1,15 +1,15 @@
-nav#navbar ul li{
-  display: inline;
-  
+@page{
+  size: A4 portrait;
+  margin: 5mm;
+  orphans:4;
+  widows:2;
 }
 @media print{
-  @page{
-    size: A4 portrait;
-    margin: 0.5cm;
-    orphans:4;
-    widows:2;
+  div#header img{
+    width: 20vw;
   }
-  body{
-    background-color: rgb(184, 165, 149);
-  }
+}
+
+#contact,#skill,#experience,#education,#award,#certification{
+  display: none;
 }
