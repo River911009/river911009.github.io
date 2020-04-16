@@ -1,32 +1,45 @@
+body *{
+  margin: 0;
+}
 @page{
   size: A4 portrait;
-  margin: 0.5cm;
+  margin: 0mm;
   orphans:4;
   widows:2;
 }
-@media screen{
-  p{
-    margin: 0px;
-  }
-  div.header{
+@media print{
+  div#header,div#contact{
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas: "profile about about";
-    background-color: beige;
+    grid-template-columns: repeat(4,1fr);
+    border: 1px solid black;
   }
-  img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  div#header img{
+    grid-area: 1/1/2/2;
     width: 80%;
+    place-self: center;
+    border-radius: 8px;
   }
-  div.profile{
-    grid-area: profile;
+  div#header div#about{
+    grid-area: 1/2/2/5;
   }
-  div.about{
-    grid-area: about;
+  p#position{
+    font-style: italic;
+    color: grey;
   }
-  div.name{
-    font-size: 24pt;
+  p#introduction{
+    padding-top: 1em;
   }
+  div#contact{
+    background-color: lightyellow;
+    font-size: 10pt;
+    place-items: center;
+  }
+  div#contact p#email{grid-area: 1/1/2/2;border: 1px solid red;}
+  div#contact p#phone{grid-area: 1/2/2/3;border: 1px solid red;}
+  div#contact p#address{grid-area: 1/3/2/4;border: 1px solid red;}
+  div#contact p#website{grid-area: 1/4/2/5;border: 1px solid red;}
+}
+
+#skill,#experience,#education,#award,#certification{
+  display: none;
 }
