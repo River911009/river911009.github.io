@@ -1,5 +1,6 @@
 body *{
   margin: 0;
+  font-size: 95%;
 }
 @page{
   size: A4 portrait;
@@ -19,27 +20,63 @@ body *{
     place-self: center;
     border-radius: 8px;
   }
-  div#header div#about{
-    grid-area: 1/2/2/5;
-  }
+  div#header div#about{grid-area: 1/2/2/5;}
   p#position{
     font-style: italic;
     color: grey;
   }
   p#introduction{
-    padding-top: 1em;
+    padding: 1em 0em;
   }
   div#contact{
     background-color: lightyellow;
-    font-size: 10pt;
+    padding: 0.5em 0em;
+    font-size: 8pt;
     place-items: center;
   }
-  div#contact p#email{grid-area: 1/1/2/2;border: 1px solid red;}
-  div#contact p#phone{grid-area: 1/2/2/3;border: 1px solid red;}
-  div#contact p#address{grid-area: 1/3/2/4;border: 1px solid red;}
-  div#contact p#website{grid-area: 1/4/2/5;border: 1px solid red;}
+  div#contact p#email{grid-area: 1/1/2/2;}
+  div#contact p#phone{grid-area: 1/2/2/3;}
+  div#contact p#address{grid-area: 1/3/2/4;}
+  div#contact p#website{grid-area: 1/4/2/5;}
+  div#skill ul li{
+    display: inline-block;
+    margin: 0.2em 0.2em;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: lightgreen;
+  }
+  div#experience ul li{
+    position: relative;
+    width: 100%
+  }
+  div#experience ul li ul{
+    margin: 1.5em 0em 0.5em 0em;
+  }
+  div#experience ul li p#time span{background-color: lightblue;}
+  div#experience ul li p#position{
+    position: absolute;
+    left: 0px;
+  }
+  div#experience ul li p#company{
+    position: absolute;
+    left: 20em;
+  }
+  div#education ul li{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 0.5em;
+  }
+  div#education ul li p#degree{
+    grid-area: 1/1/2/2;
+  }
+  div#education ul li p#university{
+    grid-area: 1/2/2/3;
+  }
 }
 
-#skill,#experience,#education,#award,#certification{
-  display: none;
+div#skill,div#experience,div#education,div#award,div#certification{
+  display: block;
+  border: 1px solid black;
 }
+
+div#skill p{display: none;}
