@@ -1,82 +1,89 @@
 body *{
-  margin: 0;
+  margin: 0mm;
   font-size: 95%;
 }
 @page{
   size: A4 portrait;
-  margin: 0mm;
+  margin: 0mm 5mm;
   orphans:4;
   widows:2;
 }
 @media print{
+  div#header{margin-top: 1em;}
   div#header,div#contact{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    border: 1px solid black;
   }
-  div#header img{
+  div#header img#profile{
     grid-area: 1/1/2/2;
-    width: 80%;
+    width: 50%;
     place-self: center;
-    border-radius: 8px;
+    border-radius: 5px;
   }
   div#header div#about{grid-area: 1/2/2/5;}
-  p#position{
+  p#position,p#degree{
     font-style: italic;
     color: grey;
   }
-  p#introduction{
-    padding: 1em 0em;
-  }
+  div#header p#introduction{padding: 1em 0em;}
   div#contact{
-    background-color: lightyellow;
     padding: 0.5em 0em;
-    font-size: 8pt;
+    font-size: 0.7em;
     place-items: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
   }
   div#contact p#email{grid-area: 1/1/2/2;}
   div#contact p#phone{grid-area: 1/2/2/3;}
   div#contact p#address{grid-area: 1/3/2/4;}
   div#contact p#website{grid-area: 1/4/2/5;}
+  div#skill,div#experience,div#education,div#award,div#certification{margin-bottom: 0.5em;}
   div#skill ul li{
     display: inline-block;
     margin: 0.2em 0.2em;
     border: 1px solid black;
+    padding: 0.2em;
     border-radius: 2px;
-    background-color: lightgreen;
   }
-  div#experience ul li{
+  div#experience ul li,div#education ul li{
     position: relative;
     width: 100%
   }
-  div#experience ul li ul{
-    margin: 1.5em 0em 0.5em 0em;
-  }
-  div#experience ul li p#time span{background-color: lightblue;}
+  p#time{font-weight: bold;}
+  div#experience ul li p#time span{color: grey;}
   div#experience ul li p#position{
     position: absolute;
-    left: 0px;
+    left: 0em;
   }
   div#experience ul li p#company{
     position: absolute;
-    left: 20em;
+    left: 25em;
   }
-  div#education ul li{
+  div#experience ul li ul{margin: 1.5em 0em 0.5em 0em;}
+  div#education ul li p#time{margin-bottom: 2em;}
+  div#education ul li p#degree{
+    position: absolute;
+    top: 1.2em;
+    left: 0em;
+  }
+  div#education ul li p#department{
+    position: absolute;
+    top: 0em;
+    left: 25em;
+  }
+  div#education ul li p#university{
+    position: absolute;
+    top: 1.2em;
+    left: 25em;
+  }
+
+  /* div#education ul li{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     margin-bottom: 0.5em;
   }
-  div#education ul li p#degree{
-    grid-area: 1/1/2/2;
-  }
-  div#education ul li p#university{
-    grid-area: 1/2/2/3;
-  }
-}
-
-div#skill,div#experience,div#education,div#award,div#certification{
-  display: block;
-  border: 1px solid black;
+  div#education ul li p#time{grid-area: 1/1/2/2;}
+  div#education ul li p#university{grid-area: 1/2/2/3;} */
 }
 
 div#skill p{display: none;}
