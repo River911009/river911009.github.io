@@ -10,6 +10,9 @@
 </head>
 <body>
   <!-- English -->
+  <div class="ng-container" ng-app="" ng-init = "word=[str:'en-US']">
+    <p ng-bind="word">{{word.str}}</p>
+  </div>
   <div id="header">
     <img id="profile" src="source/image/profile.png" alt="Riviere">
     <div id="about">
@@ -285,5 +288,6 @@
   依個人、申請職位的需求，列出求職目標 -->
 
   <!-- CV中，則會詳細的列舉出個人的經驗與相關技能，尤其是個人的學術背景，如：教學經驗、研究成果、獲獎紀錄、相關出版物⋯⋯等細節 -->
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 </body>
 </html>

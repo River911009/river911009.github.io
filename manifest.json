@@ -1,0 +1,14 @@
+{
+  "name": "Hello World",
+  "short_name": "Hello",
+  "icons":[{
+    "src": "images/bg.jpg",
+    "sizes": "192x192",
+    "type":" image/jpg"
+    }],
+  "lang": "en",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "white",
+  "theme_color": "white"
+}
