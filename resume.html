@@ -10,9 +10,17 @@
 </head>
 <body>
   <!-- English -->
-  <div class="ng-container" ng-app="" ng-init = "word=[str:'en-US']">
+  <div class="ng-container" ng-app="language" ng-controller="selector">
     <p ng-bind="word">{{word.str}}</p>
   </div>
+  <script type="text/javascript">
+    angular.module('language',[]).controller('selector',function($scope){
+      $scope.metadata=[
+        {''}
+      ];
+    })
+  </script>
+  
   <div id="header">
     <img id="profile" src="source/image/profile.png" alt="Riviere">
     <div id="about">
