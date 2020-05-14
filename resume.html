@@ -4,24 +4,15 @@
   <meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   <title>Riviere's resume</title>
-  <link rel="shortcut icon" type="image/png" href="/source/image/favicon_32x32.png">
-  <link rel="stylesheet" href="/source/css/main.css"/>
-  <link rel="stylesheet" href="/source/css/all.css">
+  <link rel="shortcut icon" type="image/png" href="source/image/favicon_32x32.png">
+  <link rel="stylesheet" href="source/css/main.css"/>
+  <link rel="stylesheet" href="source/css/all.css">
 </head>
 <body>
+  <div data-ng-app=""></div>
+
   <!-- English -->
-  <div class="ng-container" ng-app="language" ng-controller="selector">
-    <p ng-bind="word">{{word.str}}</p>
-  </div>
-  <script type="text/javascript">
-    angular.module('language',[]).controller('selector',function($scope){
-      $scope.metadata=[
-        {''}
-      ];
-    })
-  </script>
-  
-  <div id="header">
+  <div id="header" style="page-break-before:always">
     <img id="profile" src="source/image/profile.png" alt="Riviere">
     <div id="about">
       <h1>Liao Jhih He</h1>
@@ -155,7 +146,7 @@
   </div>
 
   <!-- Chinese -->
-  <div id="header">
+  <div id="header" style="page-break-before:always">
     <img id="profile" src="source/image/profile.png" alt="Riviere">
     <div id="about">
       <h1>廖至合</h1>

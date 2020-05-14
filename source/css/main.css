@@ -4,12 +4,12 @@ body *{
 }
 @page{
   size: A4 portrait;
-  margin: 0mm 5mm;
+  margin: 5mm 5mm;
   orphans:4;
   widows:2;
 }
 @media print{
-  div#header{margin-top: 1em;}
+  /* div#header{margin-top: 1em;} */
   div#header,div#contact{
     display: grid;
     grid-template-columns: repeat(4,1fr);
