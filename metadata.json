@@ -1,0 +1,135 @@
+{
+  "header": {
+    "profile": {
+      "name": "Riviere",
+      "url": "source/image/profile.png"
+    },
+    "about": {
+      "name": "Liao Jhih He",
+      "position": "Information Technology Teacher",
+      "introduction": "Taught IT 2+ years and helped student won 8th of national school skill competition computer maintenance. Also design many embedded projects from hardware to software, and it needs full-stack web interface sometimes. As always, I'm staying in creating , learning and sharing knowledges."
+    }
+  },
+  "contact": {
+    "email": "m0331005@gm.ncue.edu.tw",
+    "phone": "+886986135798",
+    "address": "Taipei, Taiwan",
+    "website": "https://river911009.github.io/"
+  },
+  "skill": {
+    "name": "Skill",
+    "content": [
+      "Develop and Evaluate Electronics",
+      "Signal analysis and Process",
+      "Full Stack Application",
+      "Design Embedded Systems and IoTs",
+      "Develop 3D model and Operate CNC machine"
+    ]
+  },
+  "experience": {
+    "name": "Experience",
+    "content": [
+      {
+        "time": "Jul 2018-<span>PRESENT</span>",
+        "position": "Information Technology Teacher",
+        "company": "Shih Yu high school, New Taipei City",
+        "describe": [
+          "Enhanced students' computer and technology skills through demonstrations and practice.",
+          "Enhanced student skill of robotic technology by teaching STEM robot group.",
+          "Supported student teachers by mentoring on classroom management. Lesson planning and activity organization.",
+          "Directed after-school tutoring and mentoring program serving 8+ senior high students."
+        ]
+      },
+      {
+        "time": "Aug 2016-Jan 2017",
+        "position": "Electronic Intern Teacher",
+        "company": "Yang Mei high school, Taoyuan City",
+        "describe": [
+          "Trained student and got no.8 on 2016 semester of national school skill competition of computer maintenance.",
+          "Supported and join Wetland Conservation Class.",
+          "Supported teach student to create Taiwan Pangolin cultural product."
+        ]
+      },
+      {
+        "time": "Oct 2015-Jan 2016",
+        "position": "Mathematic and Reading Teacher",
+        "company": "BOYO Social Welfare Foundation, Changhua City",
+        "describe": [
+          "Teaching mathematic and reading to junior high school students."
+        ]
+      },
+      {
+        "time": "Oct 2012-Jun 2013",
+        "position": "Volunteer of Counsel Centre",
+        "company": "National Changhua University of Education",
+        "describe": [
+          "Lectures helping, Psychological test."
+        ]
+      },
+      {
+        "time": "Jul 2013-Aug 2013",
+        "position": "Assembly Line Worker",
+        "company": "MAS-automation, Hsinchu County",
+        "describe":""
+      }
+    ]
+  },
+  "education": {
+    "name": "Education",
+    "content": [
+      {
+        "time": "Sep 2014-Jun 2016",
+        "degree": "Master of Engineering",
+        "department": "Department of Industrial Education and Technology",
+        "school": "National Changhua University of Education"
+      },
+      {
+        "time": "Feb 2015",
+        "degree": "Elementary Level 4A",
+        "department": "",
+        "school": "Melbourne Impact English College"
+      },
+      {
+        "time": "Sep 2010-Jun 2014",
+        "degree": "Bachelor of Engineering",
+        "department": "Department of Industrial Education and Technology",
+        "school": "National Changhua University of Education"
+      },
+      {
+        "time": "Aug 2007-Jun 2010",
+        "degree": "Department of Computer Science",
+        "department": "",
+        "school": "Taoyuan Municipal Yang Mei Senior High School"
+      }
+    ]
+  },
+  "award": {
+    "name": "Award",
+    "content": [
+      {
+        "time": "Oct 2014",
+        "title": "Bureau of Energy:Teaching Script of Solar Energy",
+        "discribe": "Solar bot"
+      },
+      {
+        "time": "Jul 2013",
+        "title": "4th of NDHU Solar Energy Application",
+        "discribe": "Garden Mate: Solar powered lawn mower"
+      },
+      {
+        "time": "Dec 2009",
+        "title": "2009 Semester of National High School Skills Competition:Computer Maintenance",
+        "discribe": "15th"
+      }
+    ]
+  },
+  "certification": {
+    "name": "Certification",
+    "content": [
+      "Computer Maintenance Class B",
+      "Web Design Class C",
+      "Industrial Electronic Class C",
+      "Teacher licenses"
+    ]
+  }
+}
