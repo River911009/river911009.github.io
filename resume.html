@@ -4,23 +4,21 @@
   <meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   <title>Riviere's resume</title>
-  <link rel="shortcut icon" type="image/png" href="/source/image/favicon_32x32.png">
-  <link rel="stylesheet" href="/source/css/main.css"/>
-  <link rel="stylesheet" href="/source/css/all.css">
+  <link rel="shortcut icon" type="image/png" href="source/image/favicon_32x32.png"/>
+  <link rel="stylesheet" href="source/css/main.css"/>
+  <link rel="stylesheet" href="source/css/all.css"/>
 </head>
 <body>
-  <!-- English -->
-  <div class="ng-container" ng-app="language" ng-controller="selector">
-    <p ng-bind="word">{{word.str}}</p>
-  </div>
   <script type="text/javascript">
-    angular.module('language',[]).controller('selector',function($scope){
-      $scope.metadata=[
-        {''}
-      ];
+    angular.module('data',[]).controller('object',function parseData($scope){
+      $scope.data=[
+        {
+
+        }
+      ]
     })
   </script>
-  
+  <!-- English -->
   <div id="header">
     <img id="profile" src="source/image/profile.png" alt="Riviere">
     <div id="about">
@@ -93,7 +91,7 @@
       <li>
         <p id="time">Jul 2013-Aug 2013</p>
         <p id="position">Assembly Line Worker</p>
-        <p id="company">MAS-automation</p>
+        <p id="company">MAS-automation, Hsinchu County</p>
         <ul></ul>
       </li>
     </ul>
@@ -155,7 +153,7 @@
   </div>
 
   <!-- Chinese -->
-  <div id="header">
+  <div id="header" class="pageBreak">
     <img id="profile" src="source/image/profile.png" alt="Riviere">
     <div id="about">
       <h1>廖至合</h1>
