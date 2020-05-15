@@ -3,21 +3,45 @@
 <head>
   <meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-  <title>Riviere's resume</title>
-  <link rel="shortcut icon" type="image/png" href="source/image/favicon_32x32.png"/>
-  <link rel="stylesheet" href="source/css/main.css"/>
-  <link rel="stylesheet" href="source/css/all.css"/>
+  <title>Rivière's resume</title>
+  <link rel="shortcut icon" type="image/png" href="/source/image/favicon_32x32.png"/>
+  <link rel="stylesheet" href="/source/css/main.css"/>
+  <link rel="stylesheet" href="/source/css/all.css"/>
 </head>
 <body>
+  <!-- <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
   <script type="text/javascript">
-    angular.module('data',[]).controller('object',function parseData($scope){
-      $scope.data=[
-        {
-
-        }
-      ]
-    })
+    angular.module('data',[]).controller('object',function($scope){
+      var lang='ch';
+      $scope.ck=function(){
+        $scope.lang='en';
+      }
+      if(lang=='en'){
+        $scope.header={
+          profile:{name:"Riviere",url:"source/image/profile.png"},
+          about:{name:"Liao Jhih He",position:"Information Technology Teacher",introduction:"Taught IT 2+ years and helped student won 8th of national school skill competition computer maintenance. Also design many embedded projects from hardware to software, and it needs full-stack web interface sometimes. As always, I'm staying in creating , learning and sharing knowledges."}
+        };
+      }
+      else if(lang=='ch'){
+        $scope.header={
+          profile:{name:"Riviere",url:"source/image/profile.png"},
+          about:{name:"廖至合",position:"資訊科技教師",introduction:"任教資科兩年以上，並指導選手獲得全國技藝競賽第八名之殊榮。並設計許多嵌入式系統及物聯網專案之軟硬體，包含全端網頁界面及資料庫等。永遠持續創作、學習及分享知識。"}
+        };
+      }
+    });
   </script>
+
+  <div id="header" data-ng-app="data" data-ng-controller="object">
+    <img id="profile" src={{header.profile.url}} alt={{header.profile.name}}>
+    <div id="about">
+      <h1 data-ng-bind="header.about.name"></h1>
+      <p id="position" data-ng-bind="header.about.position"></p>
+      <p id="introduction" data-ng-bind="header.about.introduction"></p>
+    </div>
+
+    <button ng-click="ck()">change</button>
+  </div> -->
+
   <!-- English -->
   <div id="header" style="page-break-before:always">
     <img id="profile" src="source/image/profile.png" alt="Riviere">
@@ -294,6 +318,5 @@
   依個人、申請職位的需求，列出求職目標 -->
 
   <!-- CV中，則會詳細的列舉出個人的經驗與相關技能，尤其是個人的學術背景，如：教學經驗、研究成果、獲獎紀錄、相關出版物⋯⋯等細節 -->
-  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 </body>
 </html>

@@ -1,11 +1,11 @@
 /* @import "small.css" screen and (max-width:768px); */
 
-@import "print.css" print;
+@import "print.css"; /*print;*/
 
 body *{
   margin: 0mm;
   font-size: 95%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 div#skill p{display: none;}

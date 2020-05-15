@@ -1,9 +1,9 @@
 @page{
   size: A4 portrait;
-  margin: 5mm 5mm;
+  margin: 0mm;
 }
 div#header{
-  /* margin-top: 1em; */
+  margin-top: 5mm;
   height: 8em;
 }
 div#header,div#contact{
