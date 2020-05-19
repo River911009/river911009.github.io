@@ -4,311 +4,113 @@
   <meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
   <title>Rivière's resume</title>
-  <link rel="shortcut icon" type="image/png" href="/source/image/favicon_32x32.png"/>
-  <link rel="stylesheet" href="/source/css/main.css"/>
-  <link rel="stylesheet" href="/source/css/all.css"/>
-</head>
-<body>
-  <!-- <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-  <script type="text/javascript">
-    angular.module('data',[]).controller('object',function($scope){
-      var lang='ch';
-      $scope.ck=function(){
-        $scope.lang='en';
-      }
-      if(lang=='en'){
-        $scope.header={
-          profile:{name:"Riviere",url:"source/image/profile.png"},
-          about:{name:"Liao Jhih He",position:"Information Technology Teacher",introduction:"Taught IT 2+ years and helped student won 8th of national school skill competition computer maintenance. Also design many embedded projects from hardware to software, and it needs full-stack web interface sometimes. As always, I'm staying in creating , learning and sharing knowledges."}
-        };
-      }
-      else if(lang=='ch'){
-        $scope.header={
-          profile:{name:"Riviere",url:"source/image/profile.png"},
-          about:{name:"廖至合",position:"資訊科技教師",introduction:"任教資科兩年以上，並指導選手獲得全國技藝競賽第八名之殊榮。並設計許多嵌入式系統及物聯網專案之軟硬體，包含全端網頁界面及資料庫等。永遠持續創作、學習及分享知識。"}
-        };
-      }
-    });
-  </script>
+  <link rel="shortcut icon" type="image/png" href="./source/image/favicon_32x32.png"/>
 
-  <div id="header" data-ng-app="data" data-ng-controller="object">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+  <link rel="stylesheet" href="./source/style/all.css">
+  <link rel="stylesheet" href="./source/style/main.css"/>
+</head>
+<body data-ng-app="data" data-ng-controller="data-parser">
+
+<select ng-model="lang" ng-options="l for l in langlist"></select>
+<h1>{{lang}}</h1>
+
+  <div id="header">
     <img id="profile" src={{header.profile.url}} alt={{header.profile.name}}>
     <div id="about">
       <h1 data-ng-bind="header.about.name"></h1>
       <p id="position" data-ng-bind="header.about.position"></p>
       <p id="introduction" data-ng-bind="header.about.introduction"></p>
     </div>
-
-    <button ng-click="ck()">change</button>
-  </div> -->
-
-  <!-- English -->
-  <div id="header" style="page-break-before:always">
-    <img id="profile" src="source/image/profile.png" alt="Riviere">
-    <div id="about">
-      <h1>Liao Jhih He</h1>
-      <p id="position">Information Technology Teacher</p>
-      <p id="introduction">Taught IT 2+ years and helped student won 8th of national school skill competition computer maintenance. Also design many embedded projects from hardware to software, and it needs full-stack web interface sometimes. As always, I'm staying in creating , learning and sharing knowledges.</p>
-    </div>
   </div>
   <div id="contact">
-    <p id="email"><i class="fas fa-envelope"></i> m0331005@gm.ncue.edu.tw</p>
-    <p id="phone"><i class="fas fa-phone-square"></i> +886986135798</p>
-    <p id="address"><i class="fas fa-map-marker-alt"></i> Taipei, Taiwan</p>
-    <p id="website"><i class="fas fa-globe-asia"></i> https://river911009.github.io/</p>
+    <p id="email"><i class="fas fa-envelope"></i> {{contact.email}}</p>
+    <p id="phone"><i class="fas fa-phone-square"></i> {{contact.phone}}</p>
+    <p id="address"><i class="fas fa-map-marker-alt"></i> {{contact.address}}</p>
+    <p id="website"><i class="fas fa-globe-asia"></i> {{contact.website}}</p>
   </div>
   <div id="skill">
-    <h1>Skills</h1>
+    <h1 data-ng-bind="skill.name"></h1>
     <ul id="skill">
-      <li>Develop and Evaluate Electronics</li>
-      <li>Signal analysis and Process</li>
-      <li>Full Stack Application</li>
-      <li>Design Embedded Systems and IoTs</li>
-      <li>Develop 3D model and Operate CNC machine</li>
-      <p>coding: VB, C/C++, JAVA; firmware: 8051, Arduino, ARM</p>
-      <p>PCB: PCB layout, PCB manufacturing process, cnc milling, UV mask & chemical milling, circuit repair</p>
-      <p>web design: HTML, CSS, Javascript; database: php, MySQL</p>
-      <p>management information system: hardware build & fix, peripheral; operating system: Windows, Linux, build servers</p>
-      <p>teaching subjects: programming, basic electricity, electronics, digital logic and project and competition</p>
+      <li data-ng-repeat="data in skill.content" data-ng-bind="data"></li>
     </ul>
   </div>
   <div id="experience">
-    <h1>Experience</h1>
+    <h1 data-ng-bind="experience.name"></h1>
     <ul id="exerience">
-      <li>
-        <p id="time">Jul 2018-<span>PRESENT</span></p>
-        <p id="position">IT Teacher</p>
-        <p id="company">Shih Yu high school, New Taipei City</p>
+      <li data-ng-repeat="data in experience.content">
+        <p id="time" data-ng-bind="data.time"></p>
+        <p id="position" data-ng-bind="data.position"></p>
+        <p id="company" data-ng-bind="data.company"></p>
         <ul>
-          <li>Enhanced students' computer and technology skills through demonstrations and practice.</li>
-          <li>Enhanced student skill of robotic technology by teaching STEM robot group.</li>
-          <li>Supported student teachers by mentoring on classroom management. Lesson planning and activity organization.</li>
-          <li>Directed after-school tutoring and mentoring program serving 8+ senior high students.</li>
+          <li data-ng-repeat="desc in data.describe" data-ng-bind="desc"></li>
         </ul>
-      </li>
-      <li>
-        <p id="time">Aug 2016-Jan 2017</p>
-        <p id="position">Electronic Intern Teacher</p>
-        <p id="company">Yang Mei high school, Taoyuan City</p>
-        <ul>
-          <li>Trained student and got no.8 on 2016 semester of national school skill competition of computer maintenance.</li>
-          <li>Supported and join Wetland Conservation Class</li>
-          <li>Supported teach student to create Taiwan Pangolin cultural product</li>
-        </ul>
-      </li>
-      <li>
-        <p id="time">Oct 2015-Jan 2016</p>
-        <p id="position">Mathematic and Reading Teacher</p>
-        <p id="company">BOYO Social Welfare Foundation, Changhua City</p>
-        <ul>
-          <li>Teaching mathematic and reading to junior high school students.</li>
-        </ul>
-      </li>
-      <li>
-        <p id="time">Oct 2012-Jun 2013</p>
-        <p id="position">Volunteer of Counsel Centre</p>
-        <p id="company">National Changhua University of Education</p>
-        <ul>
-          <li>Lectures helping, Psychological test</li>
-        </ul>
-      </li>
-      <li>
-        <p id="time">Jul 2013-Aug 2013</p>
-        <p id="position">Assembly Line Worker</p>
-        <p id="company">MAS-automation, Hsinchu County</p>
-        <ul></ul>
       </li>
     </ul>
   </div>
   <div id="education">
-    <h1>Education</h1>
+    <h1 data-ng-bind="education.name"></h1>
     <ul id="education">
-      <li>
-        <p id="time">Sep 2014-Jun 2016</p>
-        <p id="degree">Master of Engineering</p>
-        <p id="department">Department of Industrial Education and Technology</p>
-        <p id="university">National Changhua University of Education</p>
-      </li>
-      <li>
-        <p id="time">Feb 2015</p>
-        <p id="degree">Elementary Level 4A</p>
-        <p id="university">Melbourne Impact English College</p>
-      </li>
-      <li>
-        <p id="time">Sep 2010-Jun 2014</p>
-        <p id="degree">Bachelor of Engineering</p>
-        <p id="department">Department of Industrial Education and Technology</p>
-        <p id="university">National Changhua University of Education</p>
-      </li>
-      <li>
-        <p id="time">Aug 2007-Jun 2010</p>
-        <p id="department">Computer Science Department</p>
-        <p id="university">Taoyuan Municipal Yang Mei Senior High School</p>
+      <li data-ng-repeat="data in education.content">
+        <p id="time" data-ng-bind="data.time"></p>
+        <p id="degree" data-ng-bind="data.degree"></p>
+        <p id="department" data-ng-bind="data.department"></p>
+        <p id="university" data-ng-bind="data.school"></p>
       </li>
     </ul>
   </div>
   <div id="award">
-    <h1>Award</h1>
+    <h1 data-ng-bind="award.name"></h1>
     <ul>
-      <li>
-        <p id="time">Oct 2014</p>
-        <p id="title">Bureau of Energy:Teaching Script of Solar Energy</p>
-        <p>Solar bot</p>
-      </li>
-      <li>
-        <p id="time">Jul 2013</p>
-        <p id="title">4th of NDHU Solar Energy Application</p>
-        <p>Garden Mate: Solar powered lawn mower</p>
-      </li>
-      <li>
-        <p id="time">Dec 2009</p>
-        <p id="title">2009 Semester of National High School Skills Competition:Computer Maintenance 15th</p>
+      <li data-ng-repeat="data in award.content">
+        <p id="time" data-ng-bind="data.time"></p>
+        <p id="title" data-ng-bind="data.title"></p>
+        <p data-ng-bind="data.discribe"></p>
       </li>
     </ul>
   </div>
   <div id="certification">
-    <h1>Certifications</h1>
+    <h1 data-ng-bind="certification.name"></h1>
     <ul id="certifications">
-      <li>Computer Maintenance Class B</li>
-      <li>Web Design Class C</li>
-      <li>Industrial Electronic Class C</li>
-      <li>Teacher licenses</li>
+      <li data-ng-repeat="data in certification.content" data-ng-bind="data"></li>
     </ul>
   </div>
 
+  <script type="text/javascript">
+    angular.module('data',[])
+    .controller('data-parser',function($scope,$http){
+      $scope.langlist=['English','Taiwanese'];
+      console.log(navigator.language);
+      $scope.lang='English';
+
+      $http.get("./source/database.json")
+      .then(function(response){
+        var temp=($scope.lang=='English')? response.data.en:response.data.zh_TW;
+
+        $scope.header=temp.header;
+        $scope.contact=temp.contact;
+        $scope.skill=temp.skill;
+        $scope.experience=temp.experience;
+        $scope.education=temp.education;
+        $scope.award=temp.award;
+        $scope.certification=temp.certification;
+      });
+    });
+  </script>
+
   <!-- Chinese -->
-  <div id="header" style="page-break-before:always">
-    <img id="profile" src="source/image/profile.png" alt="Riviere">
-    <div id="about">
-      <h1>廖至合</h1>
-      <p id="position">資訊科技教師</p>
-      <p id="introduction">任教資科兩年以上，並指導選手獲得全國技藝競賽第八名之殊榮。並設計許多嵌入式系統及物聯網專案之軟硬體，包含全端網頁界面及資料庫等。永遠持續創作、學習及分享知識。</p>
-    </div>
-  </div>
-  <div id="contact">
-    <p id="email"><i class="fas fa-envelope"></i> m0331005@gm.ncue.edu.tw</p>
-    <p id="phone"><i class="fas fa-phone-square"></i> +886986135798</p>
-    <p id="address"><i class="fas fa-map-marker-alt"></i> 新北市, 台灣</p>
-    <p id="website"><i class="fas fa-globe-asia"></i> https://river911009.github.io/</p>
-  </div>
-  <div id="skill">
+  <!-- <div id="skill">
     <h1>技能</h1>
     <ul id="skill">
-      <li>開發及評估電子電路系統</li>
-      <li>信號分析及信號處理</li>
-      <li>全端網路應用設計</li>
-      <li>物聯網及嵌入式系統設計</li>
-      <li>建置 3D 模型及操作數控加工機</li>
       <p>程式設計: VB, C/C++, JAVA; 韌體開發: 8051, Arduino, ARM</p>
       <p>電路板設計: 電路板佈線, 電路板蝕刻工藝, 數控雕銑, 光罩及化學蝕刻, 電路板修護</p>
       <p>網頁設計: HTML, CSS, Javascript, php; 資料庫應用: NoSQL, MySQL</p>
       <p>管理資訊系統: 組裝及修護硬體設備, 週邊介面卡; 作業系統: Windows, Linux, 設定網路服務</p>
       <p>任教科目: 程式設計, 基本電學, 電子學, 數位邏輯與專題競賽</p>
     </ul>
-  </div>
-  <div id="experience">
-    <h1>工作經驗</h1>
-    <ul id="exerience">
-      <li>
-        <p id="time">2018年7月-<span>PRESENT</span></p>
-        <p id="position">資訊科技教師</p>
-        <p id="company">時雨高級中學, 新北市</p>
-        <ul>
-          <li>指導學生並增強電腦資訊技能</li>
-          <li>增強學生手做技能及機器人相關技術</li>
-          <li>協助導師管理學生生活及秩序以及課程及活動設計</li>
-          <li>指導課後輔導超過 8 位高中選手參與檢定及比賽</li>
-        </ul>
-      </li>
-      <li>
-        <p id="time">2016年8月-2017年1月</p>
-        <p id="position">電子科實習教師</p>
-        <p id="company">市立楊梅高中, 桃園市</p>
-        <ul>
-          <li>協助指導105學年度技藝競賽電腦修護職種培訓</li>
-          <li>參與及支援優質化溼地復育課程「埤塘新樂園」</li>
-          <li>協助指導學生製作台灣穿山甲文創商品</li>
-        </ul>
-      </li>
-      <li>
-        <p id="time">2015年10月-2016年1月</p>
-        <p id="position">國中數學及閱讀理解老師</p>
-        <p id="company">博幼社會福利基金會, 彰化縣</p>
-        <ul>
-          <li>擔任國中數學科及閱讀理解老師，輔導學習表現落後之學生</li>
-        </ul>
-      </li>
-      <li>
-        <p id="time">2012年10月-2013年1月</p>
-        <p id="position">學生諮商輔導中心志工</p>
-        <p id="company">國立彰化師範大學</p>
-        <ul>
-          <li>協助辦理各項活動講座、駐點心理測驗站</li>
-        </ul>
-      </li>
-      <li>
-        <p id="time">2013年7月-2013年8月</p>
-        <p id="position">組裝作業員</p>
-        <p id="company">威光自動化科技</p>
-        <ul></ul>
-      </li>
-    </ul>
-  </div>
-  <div id="education">
-    <h1>學歷</h1>
-    <ul id="education">
-      <li>
-        <p id="time">2014年9月-2016年1月</p>
-        <p id="degree">工學碩士</p>
-        <p id="department">工業教育與技術學系</p>
-        <p id="university">國立彰化師範大學</p>
-      </li>
-      <li>
-        <p id="time">2015年2月</p>
-        <p id="degree">初級 4A 等</p>
-        <p id="university">墨爾本 Impact 語言學校</p>
-      </li>
-      <li>
-        <p id="time">2010年9月-2014年6月</p>
-        <p id="degree">工程學士</p>
-        <p id="department">工業教育與技術學系</p>
-        <p id="university">國立彰化師範大學</p>
-      </li>
-      <li>
-        <p id="time">2007年8月-2010年6月</p>
-        <p id="department">資訊科</p>
-        <p id="university">桃園市立楊梅高中</p>
-      </li>
-    </ul>
-  </div>
-  <div id="award">
-    <h1>獎項</h1>
-    <ul>
-      <li>
-        <p id="time">2014年10月</p>
-        <p id="title">經濟部能源局太陽光電教案競賽</p>
-        <p>教案組：太陽能小蟲</p>
-      </li>
-      <li>
-        <p id="time">2013年7月</p>
-        <p id="title">第三屆東華盃太陽光電創意應用競賽佳作</p>
-        <p>Garden Mate 園藝幫手：太陽能源智慧除草機</p>
-      </li>
-      <li>
-        <p id="time">2009年12月</p>
-        <p id="title">98學年度全國高級中等學校技藝競賽電腦修護職種優勝</p>
-      </li>
-    </ul>
-  </div>
-  <div id="certification">
-    <h1>證書</h1>
-    <ul id="certifications">
-      <li>國家技術士電腦硬體裝修乙級</li>
-      <li>國家技術士網頁設計丙級</li>
-      <li>國家技術士工業電子丙級</li>
-      <li>資訊、電子、電機、控制及電子通信科教師證</li>
-    </ul>
-  </div>
+  </div> -->
+
   <!-- github: river911009.github.io
   easyeda:river801009
   google: sites.google.com/view/riverside-intro/ -->
