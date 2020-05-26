@@ -1,11 +1,24 @@
 @page{
   size: A4 portrait;
-  margin: 0mm 5mm;
+  margin: 0mm;
 }
-div#header{
-  margin-top: 5mm;
-  /* height: 9em; */
+
+body *{
+  margin: 0mm;
+  /* border: 1px solid black; */
 }
+body{
+  margin: 10mm;
+}
+
+div#header{height: 33mm;}
+div#contact{height: 5mm;}
+div#skill{height: 23mm;}
+div#experience{height: 107mm;}
+div#education{height: 36mm;}
+div#award{height: 53mm;}
+div#certification{height: 30mm;}
+
 div#header,div#contact{
   display: grid;
   grid-template-columns: repeat(4,1fr);
@@ -16,48 +29,67 @@ div#header img#profile{
   place-self: center;
   border-radius: 5px;
 }
-div#header div#about{grid-area: 1/2/2/5;}
+div#header div#about{
+  grid-area: 1/2/2/5;
+  align-self: center;
+}
 p#position,p#degree{
   font-style: italic;
   color: grey;
 }
-div#header p#introduction{padding-top: 1em;}
+div#header p#introduction{
+  padding-top: 1em;
+}
 div#contact{
-  padding: 0.5em 0em;
-  font-size: 0.7em;
+  margin: 0.2em 0em;
+  padding: 0.2em 0em;
   place-items: center;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
-div#contact p#email{grid-area: 1/1/2/2;}
-div#contact p#phone{grid-area: 1/2/2/3;}
-div#contact p#address{grid-area: 1/3/2/4;}
-div#contact p#website{grid-area: 1/4/2/5;}
-div#skill,div#experience,div#education,div#award,div#certification{margin-bottom: 0.5em;}
+div#contact p#email{
+  grid-area: 1/1/2/2;
+}
+div#contact p#phone{
+  grid-area: 1/2/2/3;
+}
+div#contact p#address{
+  grid-area: 1/3/2/4;
+}
+div#contact p#website{
+  grid-area: 1/4/2/5;
+}
+div#skill,div#experience,div#education,div#award,div#certification{
+  margin-bottom: 0.2em;
+}
 div#skill ul li{
   display: inline-block;
-  margin: 0.2em 0.2em;
+  margin: 0.1em;
+  padding: 0.1em;
   border: 1px solid black;
-  padding: 0.2em;
   border-radius: 2px;
-  font-size: 0.7em;
 }
 div#experience ul li,div#education ul li{
   position: relative;
   width: 100%
 }
-p#time{font-weight: bold;}
-div#experience ul li p#time span{color: grey;}
+p#time{
+  font-weight: bold;
+}
 div#experience ul li p#position{
   position: absolute;
   left: 0em;
 }
 div#experience ul li p#company{
   position: absolute;
-  left: 25em;
+  left: 50%;
 }
-div#experience ul li ul{margin: 1.5em 0em 0.5em 0em;}
-div#education ul li p#time{margin-bottom: 2em;}
+div#experience ul li ul{
+  margin: 1em 0em 0.5em 0em;
+}
+div#education ul li p#time{
+  margin-bottom: 2em;
+}
 div#education ul li p#degree{
   position: absolute;
   top: 1.2em;
@@ -66,18 +98,25 @@ div#education ul li p#degree{
 div#education ul li p#university{
   position: absolute;
   top: 0em;
-  left: 25em;
+  left: 50%;
 }
 div#education ul li p#department{
   position: absolute;
   top: 1.2em;
-  left: 25em;
+  left: 50%;
 }
 
-/* div#education ul li{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  margin-bottom: 0.5em;
-}
-div#education ul li p#time{grid-area: 1/1/2/2;}
-div#education ul li p#university{grid-area: 1/2/2/3;} */
+div#header div#about h1{font-size: 14pt;}
+div#header div#about p{font-size: 10pt;}
+div#contact       p{font-size: 8pt;}
+div#skill         h1{font-size: 11pt;}
+div#skill         ul li{font-size: 10pt;}
+div#experience    h1{font-size: 11pt;}
+div#experience    ul li p{font-size: 9pt;}
+div#experience    ul li ul li{font-size: 9pt;}
+div#education     h1{font-size: 11pt;}
+div#education     ul li p{font-size: 9pt;}
+div#award         h1{font-size: 11pt;}
+div#award         ul li p{font-size: 9pt;}
+div#certification h1{font-size: 11pt;}
+div#certification ul li{font-size: 10pt;}

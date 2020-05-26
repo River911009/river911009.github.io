@@ -1,9 +1,110 @@
 /* @import "small.css" screen and (max-width:768px); */
 
-@import "print.css" print;
+/* @import "print.css" print; */
 
-/* body *{
+body *{
   margin: 0mm;
-  font-size: 95%;
+  font-size: 90%;
+}
+
+/* header */
+div#header{
+  margin-top: 5mm;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+div#header img#profile{
+  grid-area: 1/1/2/2;
+  width: 30mm;
+  place-self: center;
+  border-radius: 5px;
+}
+div#header div#about{grid-area: 1/2/2/5;}
+div#header div#about h1{}
+div#header div#about p#position{
+  font-style: italic;
+  color: grey;}
+div#header div#about p#introduction{padding-top: 1em;}
+/* contact */
+div#contact{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  /* padding: 0em 0em; */
+  /* height: 8mm; */
+  font-size: 0.7em;
+  place-items: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+div#contact p#email{grid-area: 1/1/2/2;}
+div#contact p#phone{grid-area: 1/2/2/3;}
+div#contact p#address{grid-area: 1/3/2/4;}
+div#contact p#website{grid-area: 1/4/2/5;}
+/* skill */
+div#skill{margin-bottom: 0.5em;}
+div#skill h1{}
+div#skill ul#skill{}
+div#skill ul#skill li{
+  display: inline-block;
+  margin: 0.2em 0.2em;
   border: 1px solid black;
-} */
+  padding: 0.2em;
+  border-radius: 2px;
+  font-size: 0.7em;}
+/* experience */
+div#experience{margin-bottom: 0.5em;}
+div#experience h1{}
+div#experience ul#exerience{}
+div#experience ul#exerience li{
+  position: relative;
+  width: 100%}
+div#experience ul#exerience li p#time{font-weight: bold;}
+div#experience ul#exerience li p#position{
+  font-style: italic;
+  color: grey;
+  position: absolute;
+  left: 0em;}
+div#experience ul#exerience li p#company{
+  position: absolute;
+  left: 25em;}
+div#experience ul#exerience li ul{margin: 1.5em 0em 0.5em 0em;}
+div#experience ul#exerience li ul li{}
+/* education */
+div#education{margin-bottom: 0.5em;}
+div#education h1{}
+div#education ul#education{}
+div#education ul#education li{
+  position: relative;
+  width: 100%}
+div#education ul#education li p#time{
+  font-weight: bold;
+  margin-bottom: 2em;
+}
+div#education ul#education li p#degree{
+  font-style: italic;
+  color: grey;
+  position: absolute;
+  top: 1.2em;
+  left: 0em;
+}
+div#education ul#education li p#department{
+  position: absolute;
+  top: 1.2em;
+  left: 25em;}
+div#education ul#education li p#university{
+  position: absolute;
+  top: 0em;
+  left: 25em;}
+/* award */
+div#award{margin-bottom: 0.5em;}
+div#award h1{}
+div#award ul{}
+div#award ul li{}
+div#award ul li p#time{font-weight: bold;}
+div#award ul li p#title{}
+div#award ul li p{}
+/* certification */
+div#certifications{margin-bottom: 0.5em;}
+div#certifications h1{}
+div#certifications ul#certifications{}
+div#certifications ul#certifications li{}

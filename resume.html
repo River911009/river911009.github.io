@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html data-ng-app="resume" lang="{{language}}" dir="ltr"/>
 <head>
   <meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
   <title>Rivière's resume</title>
-  <link rel="shortcut icon" type="image/png" href="./source/image/favicon_32x32.png"/>
+  <link rel="shortcut icon" type="image/png" href="/source/image/favicon_32x32.png"/>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.1/angular-translate.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.1/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script> -->
 
-  <link rel="stylesheet" href="./source/style/all.css">
-  <link rel="stylesheet" href="./source/style/main.css"/>
+  <link rel="stylesheet" href="/source/style/all.css"/>
+  <link rel="stylesheet" href="/source/style/print.css"/>
 </head>
-<body data-ng-app="data" data-ng-controller="data-parser">
-
-<select ng-model="lang" ng-options="l for l in langlist"></select>
-<h1>{{lang}}</h1>
-
+<body data-ng-controller="data-parser">
   <div id="header">
-    <img id="profile" src={{header.profile.url}} alt={{header.profile.name}}>
+    <img id="profile" src="{{header.profile.url}}" alt="{{header.profile.alt}}"/>
     <div id="about">
       <h1 data-ng-bind="header.about.name"></h1>
       <p id="position" data-ng-bind="header.about.position"></p>
@@ -77,27 +75,7 @@
     </ul>
   </div>
 
-  <script type="text/javascript">
-    angular.module('data',[])
-    .controller('data-parser',function($scope,$http){
-      $scope.langlist=['English','Taiwanese'];
-      console.log(navigator.language);
-      $scope.lang='English';
-
-      $http.get("./source/database.json")
-      .then(function(response){
-        var temp=($scope.lang=='English')? response.data.en:response.data.zh_TW;
-
-        $scope.header=temp.header;
-        $scope.contact=temp.contact;
-        $scope.skill=temp.skill;
-        $scope.experience=temp.experience;
-        $scope.education=temp.education;
-        $scope.award=temp.award;
-        $scope.certification=temp.certification;
-      });
-    });
-  </script>
+  <script src="/source/script/angularjs_controller.js" charset="utf-8"></script>
 
   <!-- Chinese -->
   <!-- <div id="skill">
@@ -120,5 +98,16 @@
   依個人、申請職位的需求，列出求職目標 -->
 
   <!-- CV中，則會詳細的列舉出個人的經驗與相關技能，尤其是個人的學術背景，如：教學經驗、研究成果、獲獎紀錄、相關出版物⋯⋯等細節 -->
+
+<!-- TODO:
+      1. clean html,css tag
+      2. resume_en, zh ng i18n
+      3. cv_en, zh ng i18n
+      4. rwd thesis, project, about and homepage
+      5. pwa
+      6. performance
+    -->
+
+
 </body>
 </html>
