@@ -1,6 +1,6 @@
 var app=angular.module('resume',[])
 .run(['$rootScope',function($rootScope){
-  $rootScope.language='zh_TWg';//navigator.language;
+  $rootScope.language='zh_TW';//navigator.language;
 }])
 .controller('data-parser',function($rootScope,$scope,$http){
   var temp='./source/database_';
@@ -9,7 +9,7 @@ var app=angular.module('resume',[])
       temp+='zh_TW.json';break;
     default:
       temp+='en.json';break;
-  }
+  };
   $http.get(temp).then(function(response){
     $scope.header=response.data.header;
     $scope.contact=response.data.contact;

@@ -1,19 +1,66 @@
 <!DOCTYPE html>
-<html data-ng-app="resume" lang="{{language}}" dir="ltr"/>
+<html data-ng-app="resume" lang="{{language}}" dir="ltr">
 <head>
-  <meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
-  <title>Rivière's resume</title>
-  <link rel="shortcut icon" type="image/png" href="/source/image/favicon_32x32.png"/>
+  <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <title>Rivi&#232;re's resume</title>
+  <link rel="shortcut icon" type="image/png" href="/source/image/favicon_32x32.png" />
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.1/angular-translate.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.1/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script> -->
+  <!-- ng i18n -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.1/angular-translate.min.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.1/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script> -->
 
-  <link rel="stylesheet" href="/source/style/all.css"/>
-  <link rel="stylesheet" href="/source/style/print.css"/>
+  <link rel="stylesheet" href="/source/style/all.css" />
+  <link rel="stylesheet" href="/source/style/main.css" />
 </head>
 <body data-ng-controller="data-parser">
+<!--
+div header
+  img profile
+  div about
+    h1
+    p
+    p
+div contact
+  p email
+  p phone
+  p address
+  p website
+div skill
+  h2
+  ul
+    li
+div experience
+  h2
+  ul
+    li
+      p time
+      p position
+      p company
+      ul
+        li
+div education
+  h2
+  ul
+    li
+      p time
+      p degree
+      p university
+      p department
+div award
+  h2
+  ul
+    li
+      p time
+      p title
+      p
+div certification
+  h2
+  ul
+    li
+-->
+
   <div id="header">
     <img id="profile" src="{{header.profile.url}}" alt="{{header.profile.alt}}"/>
     <div id="about">
@@ -23,20 +70,20 @@
     </div>
   </div>
   <div id="contact">
-    <p id="email"><i class="fas fa-envelope"></i> {{contact.email}}</p>
-    <p id="phone"><i class="fas fa-phone-square"></i> {{contact.phone}}</p>
-    <p id="address"><i class="fas fa-map-marker-alt"></i> {{contact.address}}</p>
-    <p id="website"><i class="fas fa-globe-asia"></i> {{contact.website}}</p>
+    <p id="email"><i id="fas fa-envelope"></i> {{contact.email}}</p>
+    <p id="phone"><i id="fas fa-phone-square"></i> {{contact.phone}}</p>
+    <p id="address"><i id="fas fa-map-marker-alt"></i> {{contact.address}}</p>
+    <p id="website"><i id="fas fa-globe-asia"></i> {{contact.website}}</p>
   </div>
   <div id="skill">
-    <h1 data-ng-bind="skill.name"></h1>
-    <ul id="skill">
+    <h2 data-ng-bind="skill.name"></h2>
+    <ul>
       <li data-ng-repeat="data in skill.content" data-ng-bind="data"></li>
     </ul>
   </div>
   <div id="experience">
-    <h1 data-ng-bind="experience.name"></h1>
-    <ul id="exerience">
+    <h2 data-ng-bind="experience.name"></h2>
+    <ul>
       <li data-ng-repeat="data in experience.content">
         <p id="time" data-ng-bind="data.time"></p>
         <p id="position" data-ng-bind="data.position"></p>
@@ -48,18 +95,18 @@
     </ul>
   </div>
   <div id="education">
-    <h1 data-ng-bind="education.name"></h1>
-    <ul id="education">
+    <h2 data-ng-bind="education.name"></h2>
+    <ul>
       <li data-ng-repeat="data in education.content">
         <p id="time" data-ng-bind="data.time"></p>
         <p id="degree" data-ng-bind="data.degree"></p>
-        <p id="department" data-ng-bind="data.department"></p>
         <p id="university" data-ng-bind="data.school"></p>
+        <p id="department" data-ng-bind="data.department"></p>
       </li>
     </ul>
   </div>
   <div id="award">
-    <h1 data-ng-bind="award.name"></h1>
+    <h2 data-ng-bind="award.name"></h2>
     <ul>
       <li data-ng-repeat="data in award.content">
         <p id="time" data-ng-bind="data.time"></p>
@@ -69,8 +116,8 @@
     </ul>
   </div>
   <div id="certification">
-    <h1 data-ng-bind="certification.name"></h1>
-    <ul id="certifications">
+    <h2 data-ng-bind="certification.name"></h2>
+    <ul>
       <li data-ng-repeat="data in certification.content" data-ng-bind="data"></li>
     </ul>
   </div>
@@ -100,7 +147,7 @@
   <!-- CV中，則會詳細的列舉出個人的經驗與相關技能，尤其是個人的學術背景，如：教學經驗、研究成果、獲獎紀錄、相關出版物⋯⋯等細節 -->
 
 <!-- TODO:
-      1. clean html,css tag
+      1. clean html,css tag and normalisation
       2. resume_en, zh ng i18n
       3. cv_en, zh ng i18n
       4. rwd thesis, project, about and homepage
