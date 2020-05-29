@@ -61,61 +61,61 @@ div certification
     li
 -->
 
-  <div id="header">
-    <img id="profile" src="{{header.profile.url}}" alt="{{header.profile.alt}}"/>
-    <div id="about">
+  <div class="header">
+    <img class="profile" src="{{header.profile.url}}" alt="{{header.profile.alt}}"/>
+    <div class="about">
       <h1 data-ng-bind="header.about.name"></h1>
-      <p id="position" data-ng-bind="header.about.position"></p>
-      <p id="introduction" data-ng-bind="header.about.introduction"></p>
+      <p class="position" data-ng-bind="header.about.position"></p>
+      <p class="introduction" data-ng-bind="header.about.introduction"></p>
     </div>
   </div>
-  <div id="contact">
-    <p id="email"><i id="fas fa-envelope"></i> {{contact.email}}</p>
-    <p id="phone"><i id="fas fa-phone-square"></i> {{contact.phone}}</p>
-    <p id="address"><i id="fas fa-map-marker-alt"></i> {{contact.address}}</p>
-    <p id="website"><i id="fas fa-globe-asia"></i> {{contact.website}}</p>
+  <div class="contact">
+    <p class="email"><i class="fas fa-envelope"></i> {{contact.email}}</p>
+    <p class="phone"><i class="fas fa-phone-square"></i> {{contact.phone}}</p>
+    <p class="address"><i class="fas fa-map-marker-alt"></i> {{contact.address}}</p>
+    <p class="website"><i class="fas fa-globe-asia"></i> {{contact.website}}</p>
   </div>
-  <div id="skill">
+  <div class="skill">
     <h2 data-ng-bind="skill.name"></h2>
     <ul>
       <li data-ng-repeat="data in skill.content" data-ng-bind="data"></li>
     </ul>
   </div>
-  <div id="experience">
+  <div class="experience">
     <h2 data-ng-bind="experience.name"></h2>
     <ul>
       <li data-ng-repeat="data in experience.content">
-        <p id="time" data-ng-bind="data.time"></p>
-        <p id="position" data-ng-bind="data.position"></p>
-        <p id="company" data-ng-bind="data.company"></p>
+        <p class="time" data-ng-bind="data.time"></p>
+        <p class="position" data-ng-bind="data.position"></p>
+        <p class="company" data-ng-bind="data.company"></p>
         <ul>
           <li data-ng-repeat="desc in data.describe" data-ng-bind="desc"></li>
         </ul>
       </li>
     </ul>
   </div>
-  <div id="education">
+  <div class="education">
     <h2 data-ng-bind="education.name"></h2>
     <ul>
       <li data-ng-repeat="data in education.content">
-        <p id="time" data-ng-bind="data.time"></p>
-        <p id="degree" data-ng-bind="data.degree"></p>
-        <p id="university" data-ng-bind="data.school"></p>
-        <p id="department" data-ng-bind="data.department"></p>
+        <p class="time" data-ng-bind="data.time"></p>
+        <p class="degree" data-ng-bind="data.degree"></p>
+        <p class="university" data-ng-bind="data.school"></p>
+        <p class="department" data-ng-bind="data.department"></p>
       </li>
     </ul>
   </div>
-  <div id="award">
+  <div class="award">
     <h2 data-ng-bind="award.name"></h2>
     <ul>
       <li data-ng-repeat="data in award.content">
-        <p id="time" data-ng-bind="data.time"></p>
-        <p id="title" data-ng-bind="data.title"></p>
+        <p class="time" data-ng-bind="data.time"></p>
+        <p class="title" data-ng-bind="data.title"></p>
         <p data-ng-bind="data.discribe"></p>
       </li>
     </ul>
   </div>
-  <div id="certification">
+  <div class="certification">
     <h2 data-ng-bind="certification.name"></h2>
     <ul>
       <li data-ng-repeat="data in certification.content" data-ng-bind="data"></li>
@@ -125,9 +125,9 @@ div certification
   <script src="/source/script/angularjs_controller.js" charset="utf-8"></script>
 
   <!-- Chinese -->
-  <!-- <div id="skill">
+  <!-- <div class="skill">
     <h1>技能</h1>
-    <ul id="skill">
+    <ul class="skill">
       <p>程式設計: VB, C/C++, JAVA; 韌體開發: 8051, Arduino, ARM</p>
       <p>電路板設計: 電路板佈線, 電路板蝕刻工藝, 數控雕銑, 光罩及化學蝕刻, 電路板修護</p>
       <p>網頁設計: HTML, CSS, Javascript, php; 資料庫應用: NoSQL, MySQL</p>
