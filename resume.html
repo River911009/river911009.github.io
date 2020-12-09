@@ -7,6 +7,8 @@
   <link rel="shortcut icon" type="image/png" href="/source/image/favicon_32x32.png" />
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="/source/script/angularjs_controller.js" charset="utf-8" defer></script>
+
   <!-- ng i18n -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.1/angular-translate.min.js"></script> -->
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.1/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script> -->
@@ -61,7 +63,7 @@ div certification
     li
 -->
 
-  <div class="header">
+  <div class="header scroll_snap">
     <img class="profile" src="{{header.profile.url}}" alt="{{header.profile.alt}}"/>
     <div class="about">
       <h1 data-ng-bind="header.about.name"></h1>
@@ -69,19 +71,19 @@ div certification
       <p class="introduction" data-ng-bind="header.about.introduction"></p>
     </div>
   </div>
-  <div class="contact">
+  <div class="contact scroll_snap">
     <p class="email"><i class="fas fa-envelope"></i> {{contact.email}}</p>
     <p class="phone"><i class="fas fa-phone-square"></i> {{contact.phone}}</p>
     <p class="address"><i class="fas fa-map-marker-alt"></i> {{contact.address}}</p>
     <p class="website"><i class="fas fa-globe-asia"></i> {{contact.website}}</p>
   </div>
-  <div class="skill">
+  <div class="skill scroll_snap">
     <h2 data-ng-bind="skill.name"></h2>
     <ul>
       <li data-ng-repeat="data in skill.content" data-ng-bind="data"></li>
     </ul>
   </div>
-  <div class="experience">
+  <div class="experience scroll_snap">
     <h2 data-ng-bind="experience.name"></h2>
     <ul>
       <li data-ng-repeat="data in experience.content">
@@ -94,7 +96,7 @@ div certification
       </li>
     </ul>
   </div>
-  <div class="education">
+  <div class="education scroll_snap">
     <h2 data-ng-bind="education.name"></h2>
     <ul>
       <li data-ng-repeat="data in education.content">
@@ -105,7 +107,7 @@ div certification
       </li>
     </ul>
   </div>
-  <div class="award">
+  <div class="award scroll_snap">
     <h2 data-ng-bind="award.name"></h2>
     <ul>
       <li data-ng-repeat="data in award.content">
@@ -115,14 +117,12 @@ div certification
       </li>
     </ul>
   </div>
-  <div class="certification">
+  <div class="certification scroll_snap">
     <h2 data-ng-bind="certification.name"></h2>
     <ul>
       <li data-ng-repeat="data in certification.content" data-ng-bind="data"></li>
     </ul>
   </div>
-
-  <script src="/source/script/angularjs_controller.js" charset="utf-8"></script>
 
   <!-- Chinese -->
   <!-- <div class="skill">

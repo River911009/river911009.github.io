@@ -1,6 +1,6 @@
 var app=angular.module('resume',[])
 .run(['$rootScope',function($rootScope){
-  $rootScope.language='zh_TW';//navigator.language;
+  $rootScope.language=navigator.language;
 }])
 .controller('data-parser',function($rootScope,$scope,$http){
   var temp='./source/database_';
