@@ -5,26 +5,36 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
   <title>Riverside</title>
 
-	<link rel="icon" type="image/png" href="/source/image/favicon_32x32.png"/>
-	<link rel="apple-touch-icon" type="image/png" href="/source/image/favicon_144x144.png"/>
+	<link rel="icon" type="image/ico" href="image/favicon.ico"/>
+	<link rel="apple-touch-icon" type="image/png" href="image/apple-touch-icon.png"/>
 
-	<link rel="stylesheet" href="source/style/main.css"/>
+  <!-- <script src="script/main.js" charset="utf-8"></script> -->
+	<link rel="stylesheet" href="style/main.css"/>
+  <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="theme-color" content="#ffffff"> -->
 </head>
 <body class="fullscreen">
 	<!-- Cover -->
-	<section class="cover">
+	<!-- <section class="cover">
 		<h1>Riverside</h1>
 		<p>Here is Riverside where you well find informations about Rivière.</p>
-	</section>
+	</section> -->
 	<!-- Nav -->
-
+    <!-- <nav>
+      <i class="fas fa-circle"></i>
+      <i class="far fa-circle"></i>
+      <i class="far fa-circle"></i>
+    </nav> -->
   <!-- Header -->
 
   <!-- About -->
-	<section class="about">
+	<!-- <section class="about">
 		<h1>Rivière</h1>
 		<p>Nice to see you here! I am Rivière.</p>
-	</section>
+	</section> -->
   <!-- Contact -->
   <section class="contact">
     <h1>Message</h1>
@@ -32,8 +42,8 @@
     <form class="" action="" method="post">
       <table>
         <tr>
-          <th>TH1</th>
-          <th>TH2</th>
+          <td>TH1</td>
+          <td>TH2</td>
         </tr>
         <tr>
           <td>TD1</td>
@@ -45,9 +55,33 @@
   <!-- Footer -->
 	<section class="footer">
 		<h1>Footer</h1>
-		<p>info</p>
+    <ul>
+      <h1>Internal bookmark</h1>
+      <li><a href="#">Cover</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Side map</a></li>
+    </ul>
+    <ul>
+      <h1>External bookmark</h1>
+      <li><a href="#">Github</a></li>
+      <li><a href="#">Project</a></li>
+    </ul>
+    <footer>
+      <h1>Riverside by Rivière</h1>
+    </footer>
 	</section>
 
   <!-- Scripts -->
+  <script type="text/javascript">
+  if("serviceWorker" in navigator){
+    window.addEventListener("load",()=>{
+      navigator.serviceWorker
+      .register("serviceWorker.js")
+      .then(reg=>console.log("service worker registered"))
+      .catch(err=>console.log("service worker not registered",err))
+    });
+  }
+  </script>
 </body>
 </html>

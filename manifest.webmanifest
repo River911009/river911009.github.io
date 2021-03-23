@@ -1,0 +1,31 @@
+{
+  "name": "Riverside",
+  "start_url": "/index.html",
+  "display": "fullscreen",
+  "scope": "/",
+  "background_color": "red",
+  "theme_color": "blue",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "image/favicon_16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "image/favicon_32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "image/favicon_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "image/favicon_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
