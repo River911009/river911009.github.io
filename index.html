@@ -1,87 +1,81 @@
 <!DOCTYPE HTML>
 <html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
-  <title>Riverside</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <title>Riverside</title>
 
-	<link rel="icon" type="image/ico" href="image/favicon.ico"/>
-	<link rel="apple-touch-icon" type="image/png" href="image/apple-touch-icon.png"/>
+    <script src="assets/script/main.js" charset="utf-8"></script>
 
-  <!-- <script src="script/main.js" charset="utf-8"></script> -->
-	<link rel="stylesheet" href="style/main.css"/>
-  <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <!-- <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
-  <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <meta name="theme-color" content="#ffffff"> -->
-</head>
-<body class="fullscreen">
-	<!-- Cover -->
-	<!-- <section class="cover">
-		<h1>Riverside</h1>
-		<p>Here is Riverside where you well find informations about Rivière.</p>
-	</section> -->
-	<!-- Nav -->
-    <!-- <nav>
-      <i class="fas fa-circle"></i>
-      <i class="far fa-circle"></i>
-      <i class="far fa-circle"></i>
-    </nav> -->
-  <!-- Header -->
+    <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico" />
 
-  <!-- About -->
-	<!-- <section class="about">
-		<h1>Rivière</h1>
-		<p>Nice to see you here! I am Rivière.</p>
-	</section> -->
-  <!-- Contact -->
-  <section class="contact">
-    <h1>Message</h1>
-    <p>Leave a message</p>
-    <form class="" action="" method="post">
+    <link rel="stylesheet" href="assets/style/main.css" media="screen and (min-width:600px)" />
+    <link rel="stylesheet" href="assets/style/mobile.css" media="screen and (max-width:600px)" />
+    <link rel="stylesheet" href="assets/style/print.css" media="print" />
+
+    <!-- <link rel="apple-touch-icon" type="image/png" href="image/apple-touch-icon.png" /> -->
+    <!-- <meta name="apple-mobile-web-app-status-bar" content="#ffffff"> -->
+    <!-- <meta name="apple-mobile-web-app-capable" content="yes"/> -->
+    <!-- <meta name="theme-color" content="#ffffff"> -->
+  </head>
+  <body>
+    <!-- StatusBar -->
+    <div class="statusBar">
+      <p class="align_left"><i class="fas fa-signal"> 5G</i></p>
+      <p class="align_centre" id="clock"></p>
+      <p class="align_right"><i class="fas fa-battery-full"></i></p>
+    </div>
+
+    <!-- controlBar -->
+    <div class="controlBar" id="controlBar">
+      <p class="align_left control_button" onclick="openNav()"><i class="fas fa-angle-left"> Messages</i></p>
+      <div onclick="goto('#homepage')"><img src="image/profile.jpg" alt="Rivière"><p class="align_centre">Rivière</p></div>
+      <p class="align_right control_button" onclick="goto('#detail')">Details</p>
+    </div>
+
+    <!-- NavPage -->
+    <nav class="overlay" id="NavPage" onclick="closeNav()">
+      <ul class="overlay-content">
+        <li><a href="#1">About</a></li>
+        <li><a href="#2">Contact</a></li>
+        <li><a href="#3">Link</a></li>
+      </ul>
+      <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+    </nav>
+
+    <!-- Cover -->
+    <main id="MainPage" class="overlay2">
+      <!-- <h1>Riverside</h1>
+      <p>Here is Riverside where you well find informations about Rivière.</p> -->
+
+      <h2>Hello, what's your name?</h2>
+      <p>Hi there, My name is Rivière Liao. I'm a system application engineer, developing IC test system includes hardware, fimware, app and reliable communications.</p>
+
+      <h2>Awosome, can you tell me your experience?</h2>
+      <p>Sure! Here is my experience list:</p>
       <table>
         <tr>
-          <td>TH1</td>
-          <td>TH2</td>
+          <th>a</th>
+          <th>b</th>
         </tr>
         <tr>
-          <td>TD1</td>
-          <td>TD2</td>
+          <td>1</td>
+          <td>2</td>
         </tr>
       </table>
-    </form>
-  </section>
-  <!-- Footer -->
-	<section class="footer">
-		<h1>Footer</h1>
-    <ul>
-      <h1>Internal bookmark</h1>
-      <li><a href="#">Cover</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Side map</a></li>
-    </ul>
-    <ul>
-      <h1>External bookmark</h1>
-      <li><a href="#">Github</a></li>
-      <li><a href="#">Project</a></li>
-    </ul>
-    <footer>
-      <h1>Riverside by Rivière</h1>
-    </footer>
-	</section>
+    </main>
 
-  <!-- Scripts -->
-  <script type="text/javascript">
-  if("serviceWorker" in navigator){
-    window.addEventListener("load",()=>{
-      navigator.serviceWorker
-      .register("serviceWorker.js")
-      .then(reg=>console.log("service worker registered"))
-      .catch(err=>console.log("service worker not registered",err))
-    });
-  }
-  </script>
-</body>
+    <!-- Header -->
+
+    <!-- About -->
+
+    <!-- Contact -->
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; Riverside | Designed by Rivière</p>
+    </footer>
+  </body>
 </html>
