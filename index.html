@@ -7,8 +7,8 @@
 
     <script src="assets/script/main.js" charset="utf-8"></script>
 
-    <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <link rel="icon" type="image/x-icon" href="image/favicon.ico" />
 
     <link rel="stylesheet" href="assets/style/main.css" media="screen and (min-width:600px)" />
@@ -21,19 +21,29 @@
     <!-- <meta name="theme-color" content="#ffffff"> -->
   </head>
   <body>
-    <!-- StatusBar -->
-    <div class="statusBar">
-      <p class="align_left"><i class="fas fa-signal"> 5G</i></p>
-      <p class="align_centre" id="clock"></p>
-      <p class="align_right"><i class="fas fa-battery-full"></i></p>
-    </div>
-
-    <!-- controlBar -->
-    <div class="controlBar" id="controlBar">
-      <p class="align_left control_button" onclick="openNav()"><i class="fas fa-angle-left"> Messages</i></p>
-      <div onclick="goto('#homepage')"><img src="image/profile.jpg" alt="Rivière"><p class="align_centre">Rivière</p></div>
-      <p class="align_right control_button" onclick="goto('#detail')">Details</p>
-    </div>
+    <!-- Header -->
+    <header>
+      <div>
+        <i class="fa-solid fa-signal"></i>
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <p id="clock"></p>
+      <div>
+        <i class="fa-solid fa-moon"></i>
+        <i class="fa-solid fa-battery-full"></i>
+      </div>
+      <div class="header_button" onclick="openNav()">
+        <div>
+          <i class="fa-solid fa-angle-left"></i>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+      </div>
+      <div onclick="detailPage()">
+        <img src="image/profile.jpg" alt="Rivière">
+        <p>Rivière<i class="fa-solid fa-angle-right"></i></p>
+      </div>
+      <!-- <p class="header_button" onclick="">Details</p> -->
+    </header>
 
     <!-- NavPage -->
     <nav class="overlay" id="NavPage" onclick="closeNav()">
@@ -51,23 +61,30 @@
       <p>Here is Riverside where you well find informations about Rivière.</p> -->
 
       <h2>Hello, what's your name?</h2>
-      <p>Hi there, My name is Rivière Liao. I'm a system application engineer, developing IC test system includes hardware, fimware, app and reliable communications.</p>
+      <p>Hi there, My name is Rivière Liao. I'm a deputy manager of system application team, developing matrix sensing system, IC test system and reliable communication includes hardware, fimware and apps.</p>
 
       <h2>Awosome, can you tell me your experience?</h2>
       <p>Sure! Here is my experience list:</p>
       <table>
         <tr>
-          <th>a</th>
-          <th>b</th>
+          <th>time</th>
+          <th>experience</th>
         </tr>
         <tr>
-          <td>1</td>
-          <td>2</td>
+          <td>2020-Now</td>
+          <td>GTC</td>
+        </tr>
+        <tr>
+          <td>2018-2020</td>
+          <td>SYJH</td>
         </tr>
       </table>
+      <form action="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam rem mollitia consectetur est nam delectus eum, quia voluptas iusto rerum debitis fugiat, doloribus id, ea nisi natus culpa hic. Dolorem.
+      </form>
+      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nobis ducimus minus impedit maxime sed laborum voluptatem tenetur amet? Illo rerum tempore modi et accusamus? Aspernatur modi dolore blanditiis aut.</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, necessitatibus adipisci veniam iure ipsam labore aliquam eligendi officia illo incidunt totam nostrum culpa beatae, at repudiandae, veritatis ratione harum perferendis?</p>
     </main>
-
-    <!-- Header -->
 
     <!-- About -->
 
@@ -75,7 +92,9 @@
 
     <!-- Footer -->
     <footer>
-      <p>&copy; Riverside | Designed by Rivière</p>
+      <i class="fa-solid fa-camera"></i>
+      <i class="fa-brands fa-app-store"></i>
+      <p>Riverside | Designed by Rivière 2023</p>
     </footer>
   </body>
 </html>
